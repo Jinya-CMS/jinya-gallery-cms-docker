@@ -24,7 +24,7 @@ VOLUME /var/www/html
 
 RUN a2enmod rewrite
 
-ENV JINYA_VERSION 7.0.0
+ENV JINYA_VERSION 8.0.0
 
 RUN curl -fsSL -o /var/www/html/jinya.zip "https://files.jinya.de/cms/stable/${JINYA_VERSION}.zip"
 

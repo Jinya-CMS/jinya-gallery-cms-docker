@@ -2,6 +2,7 @@ FROM php:7.3-apache-stretch
 
 # install the PHP extensions we need
 RUN apt-get update
+RUN apt-get upgrade -y
 RUN apt-get install -y --no-install-recommends \
         libcurl4-openssl-dev \
         libevent-dev \
@@ -14,10 +15,12 @@ RUN apt-get install -y --no-install-recommends \
         libxml2-dev \
         libmagickwand-dev \
         libzip-dev \
+        imagemagick \
         unzip
+RUN pecl channel-update pecl.php.net
 RUN docker-php-ext-configure gd --with-freetype-dir=/usr --with-png-dir=/usr --with-jpeg-dir=/usr
 RUN docker-php-ext-install exif gd intl opcache pcntl pdo_mysql zip
-RUN pecl install imagick-3.4.4
+RUN pecl install imagick-3.4.3
 RUN docker-php-ext-enable imagick
 
 VOLUME /var/www/html

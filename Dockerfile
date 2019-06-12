@@ -27,7 +27,7 @@ VOLUME /var/www/html
 
 RUN a2enmod rewrite
 
-RUN curl -fsSL -o /var/www/jinya.zip "https://files.jinya.de/cms/stable/8.0.0.zip"
+RUN curl -fsSL -o /var/www/jinya.zip "https://files.jinya.de/cms/stable/8.0.1.zip"
 
 COPY vhost.conf /etc/apache2/sites-available/000-default.conf
 COPY conf/memory-limit.ini /usr/local/etc/php/conf.d/memory-limit.ini

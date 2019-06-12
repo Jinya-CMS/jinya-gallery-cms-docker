@@ -27,14 +27,13 @@ VOLUME /var/www/html
 
 RUN a2enmod rewrite
 
-ENV JINYA_VERSION 8.0.0
-
-RUN curl -fsSL -o /var/www/html/jinya.zip "https://files.jinya.de/cms/stable/${JINYA_VERSION}.zip"
+RUN curl -fsSL -o /var/www/jinya.zip "https://files.jinya.de/cms/stable/8.0.0.zip"
 
 COPY vhost.conf /etc/apache2/sites-available/000-default.conf
 COPY conf/memory-limit.ini /usr/local/etc/php/conf.d/memory-limit.ini
 COPY conf/opcache.ini /usr/local/etc/php/conf.d/opcache-recommended.ini
 COPY entrypoint.sh /entrypoint.sh
+COPY .htaccess /.htaccess
 
 RUN chmod +x /entrypoint.sh
 

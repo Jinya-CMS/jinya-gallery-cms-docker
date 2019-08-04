@@ -19,7 +19,7 @@ RUN apt-get install -y --no-install-recommends \
         unzip
 RUN pecl channel-update pecl.php.net
 RUN docker-php-ext-configure gd --with-freetype-dir=/usr --with-png-dir=/usr --with-jpeg-dir=/usr
-RUN docker-php-ext-install exif gd intl opcache pcntl pdo_mysql zip
+RUN docker-php-ext-install exif gd intl opcache pcntl pdo_mysql zip curl
 RUN pecl install imagick-3.4.3
 RUN docker-php-ext-enable imagick
 

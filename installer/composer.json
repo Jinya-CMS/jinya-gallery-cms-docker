@@ -1,0 +1,16 @@
+{
+  "name": "jinya/installer",
+  "license": "MIT",
+  "require": {
+    "symfony/yaml": "^4.3",
+    "ext-curl": "*",
+    "ext-zip": "*",
+    "symfony/filesystem": "^4.3"
+  },
+  "authors": [
+    {
+      "name": "Imanuel Ulbricht",
+      "email": "imanuel.ulbricht@jinya.de"
+    }
+  ]
+}

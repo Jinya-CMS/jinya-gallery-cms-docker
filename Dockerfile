@@ -26,7 +26,7 @@ RUN docker-php-ext-enable imagick
 VOLUME /var/www/html
 
 RUN a2enmod rewrite
-ENV VERSION=9.1.0
+ENV VERSION=9.1.1
 
 COPY vhost.conf /etc/apache2/sites-available/000-default.conf
 COPY conf/memory-limit.ini /usr/local/etc/php/conf.d/memory-limit.ini

@@ -33,6 +33,7 @@ COPY conf/memory-limit.ini /usr/local/etc/php/conf.d/memory-limit.ini
 COPY conf/opcache.ini /usr/local/etc/php/conf.d/opcache-recommended.ini
 COPY entrypoint.sh /entrypoint.sh
 COPY .htaccess /.htaccess
+COPY installer/ /installer/
 
 RUN chmod +x /entrypoint.sh
 

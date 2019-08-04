@@ -51,9 +51,9 @@ if (version_compare($containerVersion, $installedVersion)) {
 
         echo 'Execute database migration' . PHP_EOL;
         if ($firstRun) {
-            system('/usr/bin/php /var/www/html/bin/console jinya:first-run:create-db');
+            system('/usr/local/bin/php /var/www/html/bin/console jinya:first-run:create-db');
         } else {
-            system('/usr/bin/php /var/www/html/bin/console doctrine:migrations:migrate');
+            system('/usr/local/bin/php /var/www/html/bin/console doctrine:migrations:migrate');
         }
     }
 }
